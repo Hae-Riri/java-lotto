@@ -41,7 +41,8 @@ public class LottoGenerator {
     public static List<Integer> getLottoNumbers() {
         Collections.shuffle(numbers);
         List<Integer> pickedNumbers = numbers.subList(0, 6);
+        System.out.println(numbers.size());
         Collections.sort(pickedNumbers);
-        return new ArrayList<>(pickedNumbers);
+        return pickedNumbers; //TODO : 원인 파악
     }
 }
